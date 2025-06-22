@@ -17,6 +17,9 @@ pnpm-debug.log*
 .env
 .env.production
 
+# DevTunnels/devtunnels-tokens-microsoft
+DevTunnels/devtunnels-tokens-microsofts
+
 # macOS-specific files
 .DS_Store
 

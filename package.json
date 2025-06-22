@@ -6,9 +6,17 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "colors:generate": "node src/assets/colors/generate-css.js",
+    "colors:verify": "node src/assets/colors/verify-colors.js",
+    "colors:all": "npm run colors:verify && npm run colors:generate"
   },
   "dependencies": {
-    "astro": "^5.10.0"
+    "astro": "^5.10.0",
+    "astro-imagetools": "^0.9.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "typescript": "^5.8.3"
   }
 }
