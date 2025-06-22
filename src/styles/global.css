@@ -1,0 +1,11 @@
+.main-content {
+    background-color: #fafafa; /* Contenido principal */
+}
+  
+.book-card, .search-results {
+    background-color: #fdfdfd; /* Elementos de lectura */
+}
+  
+.modal, .tooltip {
+    background-color: #ffffff; /* Solo para elementos flotantes */
+}

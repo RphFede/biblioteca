@@ -15,9 +15,11 @@
   --color-purple-blackberry: #2f0221;
 
   /* Gray colors */
-  --color-gray-white: #FFFFFF;
-  --color-gray-snow: #fafafa;
-  --color-gray-ivory: #f5f5f5;
+    /* Jerarquía de blancos perfecta */
+  --bg-page: #f5f5f5;      /* 🏆 FONDO PRINCIPAL - más sutil */
+  --bg-content: #fafafa;   /* Contenido sobre el fondo */
+  --bg-cards: #fdfdfd;     /* Tarjetas y elementos */
+  --bg-pure: #ffffff;      /* Solo para texto/iconos */
   --color-gray-silver: #e5e5e5;
   --color-gray-lightgray: #d4d4d4;
   --color-gray-gray: #a3a3a3;
