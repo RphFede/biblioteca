@@ -14,55 +14,46 @@
     <p class="copyright">&copy; 2025 Federico Rudolph</p>  
 </footer>
 
-<style>
-footer {
-    padding: 1rem;
-    text-align: center;
-    column-gap: 0;
-    background: var(--color-purple-plum); /* Cambiado de #f8f9fa a variable púrpura suave */
-    color: var(--white-text);
-}
+<style lang="stylus">
+footer
+    padding 1rem
+    text-align center
+    column-gap 0
+    background var(--color-purple-plum) // Cambiado de #f8f9fa a variable púrpura suave
+    color var(--white-text)
 
-.social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .8rem;
-    margin-bottom: 0.3rem;
-}
+.social
+    display flex
+    justify-content center
+    align-items center
+    gap .8rem
+    margin-bottom 0.3rem
 
-.social a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-gray-snow);
-}
+.social a
+    display inline-flex
+    align-items center
+    justify-content center
+    color var(--color-gray-snow)
+    
+    &:hover
+        color var(--color-purple-rose)
 
-.social a:hover {
-    color: var(--color-purple-rose);
-}
+.social img
+    width 24px
+    height 24px
+    color var(--color-gray-silver)
+    
+    &:hover
+        color var(--color-purple-pink)
 
-.social img {
-    width: 24px;
-    height: 24px;
-    color: var(--color-gray-silver);
-}
+.social p
+    font-size 14
+    align-items center
 
-.social img:hover {
-    color: var(--color-purple-pink);
-}
-
-.social p {
-    font-size: 14;
-    align-items: center;
-}
-
-.copyright {
-    font-size: 12px;
-    font-style: italic;
-    margin-top: 0;
-    margin-bottom: .5rem;
-    color: var(--color-gray-lightgray);
-}
-
+.copyright
+    font-size 12px
+    font-style italic
+    margin-top 0
+    margin-bottom .5rem
+    color var(--color-gray-lightgray)
 </style>
