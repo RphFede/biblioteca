@@ -14,6 +14,13 @@ export default defineConfig({
         usePolling: true,
         interval: 100
       }
+    },
+    css: {
+      preprocessorOptions: {
+        stylus: {
+          paths: ['src/styles']
+        }
+      }
     }
   }
 });
