@@ -1,7 +1,8 @@
 ---
 import '../styles/global.css';
-import Logo from "../components/Logo.astro";
-import Navigation from "../components/Navigation.astro";
+import '../styles/variables.css';
+import Header from '../components/Header.astro';
+import Content from '../components/Content.astro';
 import Footer from "../components/Footer.astro";
 import { ClientRouter } from 'astro:transitions';
 
@@ -26,152 +27,25 @@ const { title = "Biblioteca",
 		<ClientRouter />
 	</head>
 	<body>
-        <header>
-            <Logo />
-            <Navigation />
-        </header>
+        <Header />
 
-        <main>
-            <slot />
-        </main>
+        <Content />
         
-        <footer>
-            <Footer />            
-        </footer>       
+        <Footer />               
 	</body>
 </html>
 
 <style>
-/* === RESPONSIVE BASE LAYOUT === */
-/* Estrategia de capas visuales */
+
 body {
-    background-color: var(--bg-page); /* Cambiado de #f5f5f5 a variable */
+    background-color: var(--white-bg); /* Cambiado de #f5f5f5 a variable */
     display: flex;
     flex-direction: column;
+    column-gap: 1rem;
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    gap: 1rem;
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family: Arial, Helvetica, sans-serif
 }
 
-/* Header responsivo */
-header {
-    padding: 1rem;
-    background: var(--bg-content); /* Cambiado de #fff a variable */
-    border-bottom: 1px solid var(--color-gray-silver); /* Cambiado de #e5e5e5 a variable */
-}
-
-/* Main content responsivo */
-main {
-    flex: 1;
-    padding: 1rem;
-    max-width: 100%;
-    overflow-x: hidden; /* Previene scroll horizontal */
-}
-
-/* Footer responsivo */
-footer {
-    padding: 1rem;
-    background: var(--color-purple-lavender); /* Cambiado de #f8f9fa a variable púrpura suave */
-    border-top: 1px solid var(--color-gray-silver); /* Cambiado de #e5e5e5 a variable */
-}
-
-/* === BREAKPOINTS RESPONSIVOS === */
-
-/* Tablets (768px y arriba) */
-@media (min-width: 768px) {
-    body {
-        gap: 1.5rem;
-    }
-    
-    header {
-        padding: 1.5rem 2rem;
-    }
-    
-    main {
-        padding: 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
-        width: 100%;
-    }
-    
-    footer {
-        padding: 1.5rem 2rem;
-    }
-}
-
-/* Desktop (1024px y arriba) */
-@media (min-width: 1024px) {
-    body {
-        gap: 2rem;
-    }
-    
-    header {
-        padding: 2rem;
-    }
-    
-    main {
-        padding: 2rem 3rem;
-    }
-    
-    footer {
-        padding: 2rem;
-    }
-}
-
-/* Desktop grande (1440px y arriba) */
-@media (min-width: 1440px) {
-    main {
-        max-width: 1400px;
-        padding: 3rem;
-    }
-}
-
-/* === UTILIDADES RESPONSIVAS === */
-
-/* Imágenes responsivas por defecto */
-:global(img) {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Tablas responsivas */
-:global(table) {
-    width: 100%;
-    overflow-x: auto;
-    display: block;
-    white-space: nowrap;
-}
-
-@media (min-width: 768px) {
-    :global(table) {
-        display: table;
-        white-space: normal;
-    }
-}
-
-/* Contenedores de texto responsivos */
-:global(.text-container) {
-    max-width: 65ch;
-    line-height: 1.6;
-}
-
-/* Ocultar elementos en móvil */
-:global(.hide-mobile) {
-    display: none;
-}
-
-@media (min-width: 768px) {
-    :global(.hide-mobile) {
-        display: block;
-    }
-}
-
-/* Mostrar solo en móvil */
-@media (min-width: 768px) {
-    :global(.show-mobile) {
-        display: none;
-    }
-}
 </style>

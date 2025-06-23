@@ -1,16 +1,18 @@
 {
   // Paleta de colores minimalista - Morado Tirio y Blanco
   "purple": {
-    "lavender": "#faf7fa",
-    "thistle": "#f4eef4",
-    "lilac": "#e9dde9",
-    "mauve": "#d4bfd4",
-    "orchid": "#b896b8",
+    "rose": "#ffc0cb",
+    "pink": "#ff69b4",
+    "magenta": "#da70d6",
+    "violet": "#9370db",
+    "purple": "#8a2be2",
+    "indigo": "#6a0dad",
     "plum": "#4F0341",
     "eggplant": "#470339",
     "grape": "#3f0331",
     "mulberry": "#370229",
-    "blackberry": "#2f0221"
+    "blackberry": "#2f0221",
+    "deep-purple": "#1a0118"
   },
   "gray": {
     "white": "#FFFFFF",
