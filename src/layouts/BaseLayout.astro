@@ -4,10 +4,12 @@ import Logo from "../components/Logo.astro";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import { ClientRouter } from 'astro:transitions';
+
 export interface Props {
-	title?: string; // El "?" indica que es opcional, por defecto es "Reflexiones de sillón"
+	title?: string;
 	description?: string;
 }
+
 const { title = "Biblioteca",
 		description = "Biblioteca de libros"
 } = Astro.props;
@@ -16,12 +18,12 @@ const { title = "Biblioteca",
 <html lang="es">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/phicon.svg" /> <!-- icono de la web -->
+		<link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="description" content={description} />
-		<meta name="generator" content={Astro.generator} /> <!-- generador de la web -->
+		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title> 
-		<ClientRouter /> <!-- router para las transiciones -->
+		<ClientRouter />
 	</head>
 	<body>
         <header>
@@ -32,6 +34,7 @@ const { title = "Biblioteca",
         <main>
             <slot />
         </main>
+        
         <footer>
             <Footer />            
         </footer>       
@@ -42,7 +45,7 @@ const { title = "Biblioteca",
 /* === RESPONSIVE BASE LAYOUT === */
 /* Estrategia de capas visuales */
 body {
-    background-color: #f5f5f5; /* Base más suave */
+    background-color: var(--bg-page); /* Cambiado de #f5f5f5 a variable */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -55,8 +58,8 @@ body {
 /* Header responsivo */
 header {
     padding: 1rem;
-    background: var(--header-bg, #fff);
-    border-bottom: 1px solid var(--border-color, #e5e5e5);
+    background: var(--bg-content); /* Cambiado de #fff a variable */
+    border-bottom: 1px solid var(--color-gray-silver); /* Cambiado de #e5e5e5 a variable */
 }
 
 /* Main content responsivo */
@@ -70,8 +73,8 @@ main {
 /* Footer responsivo */
 footer {
     padding: 1rem;
-    background: var(--footer-bg, #f8f9fa);
-    border-top: 1px solid var(--border-color, #e5e5e5);
+    background: var(--color-purple-lavender); /* Cambiado de #f8f9fa a variable púrpura suave */
+    border-top: 1px solid var(--color-gray-silver); /* Cambiado de #e5e5e5 a variable */
 }
 
 /* === BREAKPOINTS RESPONSIVOS === */
